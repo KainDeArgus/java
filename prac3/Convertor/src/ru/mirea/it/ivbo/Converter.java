@@ -9,6 +9,7 @@ public class Converter {
         Scanner scanner = new Scanner(System.in);
 
         System.out.println("France - fr\t\tKorea - ko\t\tUS - en\t\tJapan - ja");
+        System.out.println("Примечание: запятая при выводе евро - разделитель дробной и целой частей, в остальных же случаях - разделитель трёх старших разрядов целых чисел.");
         System.out.print("Введите текущую локализацию: ");
         String lc = scanner.next();
         Locale locale;
@@ -56,7 +57,7 @@ public class Converter {
                 return;
         }
 
-        double NumberInstanceNext = 0;
+        double NumberInstanceNext = 1;
         switch (lc) {
             case "fr-ko":
                 NumberInstanceNext = 1428.21;
@@ -95,7 +96,6 @@ public class Converter {
                 NumberInstanceNext = 9.08;
                 break;
         }
-
         System.out.print("У вас есть " + NumberFormat.getCurrencyInstance(locale).format(NumberInstance));
         System.out.print(" или " + NumberFormat.getCurrencyInstance(localNext).format(NumberInstance * NumberInstanceNext));
     }
