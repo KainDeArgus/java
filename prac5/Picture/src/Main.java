@@ -9,7 +9,7 @@ public class Main {
         label.setIcon(image);
         JFrame frame = new JFrame("Pic");
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        frame.setSize(1000, 1000);
+        frame.setSize(500, 500);
         frame.add(label);
         frame.setVisible(true);
     }

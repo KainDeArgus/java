@@ -19,11 +19,11 @@ public class Main {
         }
 
         interface ManClothing {
-            public void dressMan();
+            void dressMan();
         }
 
         interface WomenClothing {
-            public void dressWomen();
+            void dressWomen();
         }
 
         abstract class Clothes {

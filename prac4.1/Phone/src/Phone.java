@@ -22,7 +22,7 @@ public class Phone {
     public int getNumber(){
         return this.number;
     }
-    public void sendMessage(int...numbers){
+    public void sendMessage(int... numbers){
         for (int x: numbers){
             System.out.println(x);
         }

@@ -24,13 +24,10 @@ public class Main {
 
 
         JButton button1 = new JButton("AC Milan");
-        button1.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                countM++;
-                LastScorer = "AC Milan";
-                update();
-            }
+        button1.addActionListener(e -> {
+            countM++;
+            LastScorer = "AC Milan";
+            update();
         });
         JButton button2 = new JButton("Real Madrid");
         button2.addActionListener(new ActionListener() {
