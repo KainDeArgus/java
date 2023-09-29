@@ -32,6 +32,8 @@ public class Main {
 
         int iteratorLeftArr = 0, iteratorRightArr = 0;
         for (int i = leftS; i <= rightS; i++) {
+
+
             if (iteratorLeftArr <= (middle - leftS) && iteratorRightArr <= (rightS - middle - 1)) {
                 if (leftArr[iteratorLeftArr].compareTo(rightArr[iteratorRightArr]) < 0) {
                     resultSort[i] = leftArr[iteratorLeftArr];
@@ -52,10 +54,10 @@ public class Main {
     }
 
     public static void main(String[] args) {
-        Student oleg = new Student("Oleg", 18, 5);
+        Student oleg = new Student("Oleg", 18, 0);
         Student genadiy = new Student("Genadiy", 184, 4.5);
-        Student kirilliy = new Student("Kirilliy", 45, 2.4);
-        Student oksaniy = new Student("Oksaniy", -1, 3.6);
+        Student kirilliy = new Student("Kirilliy", 45, 0);
+        Student oksaniy = new Student("Oksaniy", -1, Double.MIN_VALUE+1);
         Student[] iDNumber = {oleg, genadiy, kirilliy, oksaniy};
 
         InsertSort(iDNumber);
