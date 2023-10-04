@@ -3,7 +3,7 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-public class TestJComboBox{
+public class MyJComboBox{
     public static void test(){
         JFrame frame = new JFrame("TestJComboBox");
         frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
