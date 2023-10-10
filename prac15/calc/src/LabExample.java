@@ -63,6 +63,7 @@ class LabExample extends JFrame {
                 double x1 = Double.parseDouble(jta1.getText().trim());
 //переменная для хранения ввода в текстовое поле 2
                 double x2 = Double.parseDouble(jta2.getText().trim());
+
 //создаем всплывающее окно INFORMATION_MESSAGE
                 JOptionPane.showMessageDialog(null, "Result = " + (x1 / x2), "Alert", JOptionPane.INFORMATION_MESSAGE);
             } catch (Exception error) {

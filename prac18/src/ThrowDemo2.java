@@ -2,7 +2,7 @@ import java.util.Objects;
 import java.util.Scanner;
 
 public class ThrowDemo2 {
-    public  void getKey(){
+    public  void getKey() throws NullPointerException {
         Scanner myScanner = new Scanner( System.in );
         String key="";
         while(key.equals("")){
