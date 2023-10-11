@@ -3,7 +3,7 @@ import java.awt.*;
 
 public class CalculatorUI extends JFrame {
     private JTextArea input = new JTextArea();
-    private JTextArea history = new JTextArea(100,15);
+    private JTextArea history = new JTextArea(100, 15);
 
     public void setText(String in) {
         input.setText(in);
@@ -19,14 +19,14 @@ public class CalculatorUI extends JFrame {
 
         Font font = input.getFont();
         float size = 30.0f;
-        input.setFont( font.deriveFont(size));
+        input.setFont(font.deriveFont(size));
         input.setLineWrap(true);
         input.setWrapStyleWord(false);
         input.setEditable(false);
 
         font = history.getFont();
         size = 15.0f;
-        history.setFont( font.deriveFont(size));
+        history.setFont(font.deriveFont(size));
         history.setLineWrap(true);
         history.setWrapStyleWord(false);
         history.setEditable(false);
@@ -66,6 +66,6 @@ public class CalculatorUI extends JFrame {
 
     public void updateUI(String expression, double result) {
         input.setText(String.valueOf(result));
-        history.setText(history.getText() + "\n" + expression + "\n");
+        history.setText(history.getText() + "\n" + expression + " = " + result + "\n");
     }
 }

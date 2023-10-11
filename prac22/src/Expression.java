@@ -5,6 +5,7 @@ public class Expression {
     public void clearResult() {
         result = 0;
     }
+
     private double result;
     private String exp;
 
@@ -44,7 +45,7 @@ public class Expression {
                             expression.push(result);
                         } else throw new NotSolvingException();
                     }
-                }catch (Exception e){
+                } catch (Exception e) {
                     throw new NotSolvingException();
                 }
             }

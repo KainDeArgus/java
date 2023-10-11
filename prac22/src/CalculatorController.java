@@ -5,6 +5,7 @@ import java.util.Objects;
 public class CalculatorController {
     private final CalculatorUI calculatorUI;
     private final Expression expression;
+    private boolean wasResult = false;
 
     public CalculatorController(Expression expression) {
 
@@ -27,6 +28,10 @@ public class CalculatorController {
         for (int i = 0; i < 10; i++) {
             int finalI = i;
             numberButtons[i].addActionListener(e -> {
+                if (wasResult) {
+                    calculatorUI.setText("");
+                    wasResult = false;
+                }
                 calculatorUI.setText(calculatorUI.getText() + finalI);
             });
         }
@@ -42,33 +47,58 @@ public class CalculatorController {
                     expression.clearResult();
                 }
                 calculatorUI.updateUI(expression.getExpression(), expression.getResult());
+                wasResult = true;
             }
         });
 
 
         addButton.addActionListener(e -> {
+            if (wasResult) {
+                calculatorUI.setText("");
+                wasResult = false;
+            }
             calculatorUI.setText(calculatorUI.getText() + "+");
         });
 
         subButton.addActionListener(e -> {
+            if (wasResult) {
+                calculatorUI.setText("");
+                wasResult = false;
+            }
             calculatorUI.setText(calculatorUI.getText() + "-");
         });
 
         mulButton.addActionListener(e -> {
+            if (wasResult) {
+                calculatorUI.setText("");
+                wasResult = false;
+            }
             calculatorUI.setText(calculatorUI.getText() + "*");
         });
 
         divButton.addActionListener(e -> {
+            if (wasResult) {
+                calculatorUI.setText("");
+                wasResult = false;
+            }
             calculatorUI.setText(calculatorUI.getText() + "/");
         });
 
         pointButton.addActionListener(e -> {
+            if (wasResult) {
+                calculatorUI.setText("");
+                wasResult = false;
+            }
             calculatorUI.setText(calculatorUI.getText() + "|");
         });
 
         backSpaceButton.addActionListener(e -> {
+            if (wasResult) {
+                calculatorUI.setText("");
+                wasResult = false;
+            }
             StringBuilder in = new StringBuilder(calculatorUI.getText());
-            in.deleteCharAt(in.length()-1);
+            in.deleteCharAt(in.length() - 1);
             calculatorUI.setText(String.valueOf(in));
         });
 
