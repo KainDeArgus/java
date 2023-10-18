@@ -6,6 +6,12 @@ public class QueueTest {
         aqm.enqueue("Text3");
         aqm.enqueue("Text4");
         aqm.enqueue("Text5");
+
+        aqm.dequeue();
+        aqm.dequeue();
+
+        aqm.enqueue("Text6");
+
         for (int i = 0; i < 8; i++)
             System.out.print(aqm.dequeue() + " ");
         System.out.println();
